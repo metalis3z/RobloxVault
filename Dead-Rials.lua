@@ -111,20 +111,12 @@ end
 print("=== Starting map scan ===")
 local scanTarget = CFrame.new(-424.448975, 26.055481, -49040.6562)
 local scanSteps  = 50
-local barLength = 30
-
 for i = 1, scanSteps do
-    hrp.CFrame = scanTarget
+    hrp.CFrame = hrp.CFrame:Lerp(scanTarget, i/scanSteps)
     task.wait(0.3)
     recordBonds()
     task.wait(0.1)
-
-    local percent = math.floor((i / scanSteps) * 100)
-    if percent % 10 == 0 then
-        print(string.format("[SCAN] Progress: %d%% (%d/%d)", percent, i, scanSteps))
-    end
 end
-
 hrp.CFrame = scanTarget
 task.wait(0.3)
 recordBonds()
@@ -178,9 +170,9 @@ end
 humanoid:TakeDamage(999999)
 EndDecisionRemote:FireServer(false)
 
-queue_on_tp("https://raw.githubusercontent.com/metalis3z/RobloxVault/refs/heads/main/Dead-Rials.lua")
+queue_on_tp("PUT YOUR SCRIPT HERE")
 
-print("=== auto bonds finished ===")
+print("=== Script finished ===")
 
 local totalFound = #bondData
 local totalClaimed = 0
