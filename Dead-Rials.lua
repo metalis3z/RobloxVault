@@ -178,7 +178,7 @@ end
 humanoid:TakeDamage(999999)
 EndDecisionRemote:FireServer(false)
 
-queue_on_tp("PUT YOUR SCRIPT HERE")
+queue_on_tp("https://raw.githubusercontent.com/metalis3z/RobloxVault/refs/heads/main/Dead-Rials.lua")
 
 print("=== auto bonds finished ===")
 
