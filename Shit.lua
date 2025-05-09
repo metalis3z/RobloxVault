@@ -437,6 +437,7 @@ task.delay(0.25 * #textList + 5.5, function()
 	if screenGui then screenGui:Destroy() end
 end)
 
+task.wait(6)
 
 -- ScreenGui
 local Gui = Instance.new("ScreenGui", game.CoreGui)
